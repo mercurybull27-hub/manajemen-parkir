@@ -28,7 +28,7 @@
         petal.style.background = 'radial-gradient(ellipse at center, hsl(' + hue + ', 100%, 85%) 0%, transparent 70%)';
 
         const keyframes = `
-            @keyframes petalDrift${Date.now()}${Math.random()} {
+            @keyframes petalDrift${Date.now()}_${Math.random().toString(36).slice(2)} {
                 0% {
                     opacity: 0;
                     transform: translateX(0) translateY(-20px) rotate(0deg) scale(0.5);

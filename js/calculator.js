@@ -125,7 +125,7 @@
             .replace(/÷/g, '/')
             .replace(/−/g, '-')
             .replace(/π/g, '(' + Math.PI + ')')
-            .replace(/e(?![xp])/g, '(' + Math.E + ')');
+            .replace(/(?<![.\d])e(?![.\d+\-xp])/g, '(' + Math.E + ')');
 
         processed = processed.replace(/(\d+(?:\.\d+)?)!/g, function (_, n) {
             return 'factorial(' + n + ')';
