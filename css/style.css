@@ -6,34 +6,34 @@
 }
 
 :root {
-    --bg-gradient-1: #1a0533;
-    --bg-gradient-2: #2d1b69;
-    --bg-gradient-3: #0f0c29;
+    --bg-gradient-1: #0a1628;
+    --bg-gradient-2: #0d2137;
+    --bg-gradient-3: #061220;
     --calc-bg: rgba(255, 255, 255, 0.08);
-    --calc-border: rgba(255, 182, 255, 0.3);
+    --calc-border: rgba(57, 197, 187, 0.3);
     --display-bg: rgba(10, 5, 30, 0.85);
     --display-text: #f0e6ff;
     --btn-num-bg: rgba(255, 255, 255, 0.12);
     --btn-num-hover: rgba(255, 255, 255, 0.22);
     --btn-num-text: #f0e6ff;
-    --btn-op-bg: rgba(255, 105, 180, 0.25);
-    --btn-op-hover: rgba(255, 105, 180, 0.45);
-    --btn-op-text: #FFB7C5;
-    --btn-sci-bg: rgba(123, 104, 238, 0.2);
-    --btn-sci-hover: rgba(123, 104, 238, 0.4);
-    --btn-sci-text: #B8A9FF;
+    --btn-op-bg: rgba(57, 197, 187, 0.25);
+    --btn-op-hover: rgba(57, 197, 187, 0.45);
+    --btn-op-text: #7EEEE5;
+    --btn-sci-bg: rgba(30, 144, 255, 0.2);
+    --btn-sci-hover: rgba(30, 144, 255, 0.4);
+    --btn-sci-text: #90C8FF;
     --btn-clear-bg: rgba(255, 99, 71, 0.25);
     --btn-clear-hover: rgba(255, 99, 71, 0.45);
     --btn-clear-text: #FF9B8E;
-    --btn-equals-bg: linear-gradient(135deg, #FF69B4, #7B68EE);
-    --btn-equals-hover: linear-gradient(135deg, #FF85C8, #9B8FFF);
+    --btn-equals-bg: linear-gradient(135deg, #39C5BB, #1E90FF);
+    --btn-equals-hover: linear-gradient(135deg, #5DD5CC, #4BA3FF);
     --btn-memory-bg: rgba(255, 215, 0, 0.15);
     --btn-memory-hover: rgba(255, 215, 0, 0.3);
     --btn-memory-text: #FFD700;
-    --pink: #FF69B4;
-    --purple: #7B68EE;
+    --teal: #39C5BB;
+    --blue: #1E90FF;
     --gold: #FFD700;
-    --sakura: #FFB7C5;
+    --sakura: #7EEEE5;
     --font-main: 'M PLUS Rounded 1c', sans-serif;
     --font-display: 'Zen Maru Gothic', sans-serif;
 }
@@ -147,7 +147,7 @@ body {
     font-family: var(--font-display);
     font-size: 2.8rem;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--pink), var(--purple), var(--gold));
+    background: linear-gradient(135deg, var(--teal), var(--blue), var(--gold));
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -175,7 +175,7 @@ body {
 
 .subtitle {
     font-size: 1rem;
-    color: var(--sakura);
+    color: #7EEEE5;
     margin-top: 4px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -214,11 +214,23 @@ body {
 .character-svg {
     width: 160px;
     height: auto;
-    filter: drop-shadow(0 5px 15px rgba(255, 105, 180, 0.3));
+    filter: drop-shadow(0 5px 15px rgba(57, 197, 187, 0.3));
     transition: transform 0.3s ease;
 }
 
 .character-svg:hover {
+    transform: scale(1.05);
+}
+
+.character-img {
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    filter: drop-shadow(0 8px 25px rgba(57, 197, 187, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.character-img:hover {
     transform: scale(1.05);
 }
 
@@ -234,7 +246,7 @@ body {
     position: relative;
     max-width: 150px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+    box-shadow: 0 4px 15px rgba(57, 197, 187, 0.2);
     animation: bubblePop 0.4s ease;
     transition: all 0.3s ease;
 }
@@ -267,7 +279,7 @@ body {
     content: '';
     position: absolute;
     inset: -3px;
-    background: linear-gradient(135deg, var(--pink), var(--purple), var(--gold), var(--pink));
+    background: linear-gradient(135deg, var(--teal), var(--blue), var(--gold), var(--teal));
     background-size: 300% 300%;
     border-radius: 28px;
     animation: borderGlow 4s ease infinite;
@@ -307,7 +319,7 @@ body {
     align-items: flex-end;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(123, 104, 238, 0.2);
+    border: 1px solid rgba(30, 144, 255, 0.2);
     box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -322,7 +334,7 @@ body {
 .display-decoration.top-left {
     top: 8px;
     left: 8px;
-    background: var(--pink);
+    background: var(--teal);
     width: 8px;
     height: 8px;
     opacity: 0.5;
@@ -331,7 +343,7 @@ body {
 .display-decoration.top-right {
     top: 8px;
     right: 8px;
-    background: var(--purple);
+    background: var(--blue);
     width: 8px;
     height: 8px;
     opacity: 0.5;
@@ -352,7 +364,7 @@ body {
 .result-display {
     font-family: var(--font-display);
     font-size: 1.1rem;
-    color: rgba(255, 183, 197, 0.7);
+    color: rgba(126, 238, 229, 0.7);
     text-align: right;
     width: 100%;
     min-height: 20px;
@@ -382,7 +394,7 @@ body {
 }
 
 .mode-badge {
-    background: rgba(123, 104, 238, 0.3);
+    background: rgba(30, 144, 255, 0.3);
     color: var(--btn-sci-text);
 }
 
@@ -421,7 +433,7 @@ body {
     left: 50%;
     width: 0;
     height: 0;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(126, 238, 229, 0.3);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
@@ -454,12 +466,12 @@ body {
 .btn-op {
     background: var(--btn-op-bg);
     color: var(--btn-op-text);
-    border: 1px solid rgba(255, 105, 180, 0.15);
+    border: 1px solid rgba(57, 197, 187, 0.15);
 }
 
 .btn-op:hover {
     background: var(--btn-op-hover);
-    box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+    box-shadow: 0 0 15px rgba(57, 197, 187, 0.2);
 }
 
 /* Scientific buttons */
@@ -467,17 +479,17 @@ body {
     background: var(--btn-sci-bg);
     color: var(--btn-sci-text);
     font-size: 0.82rem;
-    border: 1px solid rgba(123, 104, 238, 0.15);
+    border: 1px solid rgba(30, 144, 255, 0.15);
 }
 
 .btn-sci:hover {
     background: var(--btn-sci-hover);
-    box-shadow: 0 0 15px rgba(123, 104, 238, 0.2);
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.2);
 }
 
 .btn-sci.active {
-    background: rgba(123, 104, 238, 0.5);
-    box-shadow: 0 0 20px rgba(123, 104, 238, 0.4);
+    background: rgba(30, 144, 255, 0.5);
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.4);
 }
 
 /* Clear buttons */
@@ -499,12 +511,12 @@ body {
     font-size: 1.4rem;
     font-weight: 800;
     border: none;
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    box-shadow: 0 4px 15px rgba(57, 197, 187, 0.3);
 }
 
 .btn-equals:hover {
     background: var(--btn-equals-hover);
-    box-shadow: 0 6px 25px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 6px 25px rgba(57, 197, 187, 0.5);
     transform: translateY(-1px);
 }
 
@@ -542,11 +554,11 @@ body {
     text-align: center;
     padding: 20px;
     font-size: 0.85rem;
-    color: rgba(255, 183, 197, 0.5);
+    color: rgba(126, 238, 229, 0.5);
 }
 
 .heart {
-    color: var(--pink);
+    color: var(--teal);
     display: inline-block;
     animation: heartbeat 1.5s ease infinite;
 }
@@ -647,17 +659,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 105, 180, 0.3);
+    background: rgba(57, 197, 187, 0.3);
     border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 105, 180, 0.5);
+    background: rgba(57, 197, 187, 0.5);
 }
 
 /* ===== Selection ===== */
 ::selection {
-    background: rgba(255, 105, 180, 0.3);
+    background: rgba(57, 197, 187, 0.3);
     color: white;
 }
 

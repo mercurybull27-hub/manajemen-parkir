@@ -31,53 +31,94 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Anime Character Left -->
+            <!-- Anime Character Left (Miku image) -->
             <div class="anime-character left-character">
-                <svg viewBox="0 0 200 300" class="character-svg">
-                    <!-- Hair -->
-                    <ellipse cx="100" cy="80" rx="65" ry="70" fill="#7B68EE"/>
-                    <ellipse cx="50" cy="120" rx="20" ry="60" fill="#7B68EE"/>
-                    <ellipse cx="150" cy="120" rx="20" ry="60" fill="#7B68EE"/>
-                    <!-- Hair highlights -->
-                    <ellipse cx="80" cy="50" rx="15" ry="8" fill="#9B8FFF" opacity="0.6"/>
-                    <ellipse cx="120" cy="55" rx="12" ry="6" fill="#9B8FFF" opacity="0.6"/>
-                    <!-- Face -->
-                    <ellipse cx="100" cy="90" rx="45" ry="50" fill="#FFE4C9"/>
-                    <!-- Eyes -->
-                    <ellipse cx="80" cy="85" rx="12" ry="14" fill="white"/>
-                    <ellipse cx="120" cy="85" rx="12" ry="14" fill="white"/>
-                    <ellipse cx="82" cy="87" rx="8" ry="10" fill="#7B68EE"/>
-                    <ellipse cx="122" cy="87" rx="8" ry="10" fill="#7B68EE"/>
-                    <ellipse cx="84" cy="84" rx="3" ry="3" fill="white"/>
-                    <ellipse cx="124" cy="84" rx="3" ry="3" fill="white"/>
-                    <ellipse cx="80" cy="90" rx="2" ry="2" fill="white" opacity="0.7"/>
-                    <ellipse cx="120" cy="90" rx="2" ry="2" fill="white" opacity="0.7"/>
-                    <!-- Blush -->
-                    <ellipse cx="68" cy="100" rx="10" ry="5" fill="#FFB7C5" opacity="0.5"/>
-                    <ellipse cx="132" cy="100" rx="10" ry="5" fill="#FFB7C5" opacity="0.5"/>
-                    <!-- Mouth -->
-                    <path d="M92 108 Q100 116 108 108" stroke="#E8927C" stroke-width="2" fill="none" stroke-linecap="round"/>
-                    <!-- Body -->
-                    <path d="M65 135 Q60 160 55 200 L70 200 Q75 170 80 155 L120 155 Q125 170 130 200 L145 200 Q140 160 135 135 Z" fill="#FF69B4"/>
-                    <!-- Collar -->
-                    <path d="M75 140 L100 160 L125 140" stroke="white" stroke-width="3" fill="none"/>
-                    <!-- Arms -->
-                    <path d="M65 150 Q40 170 35 200" stroke="#FFE4C9" stroke-width="12" fill="none" stroke-linecap="round"/>
-                    <path d="M135 150 Q160 170 165 200" stroke="#FFE4C9" stroke-width="12" fill="none" stroke-linecap="round"/>
-                    <!-- Skirt -->
-                    <path d="M55 200 Q50 240 40 270 L160 270 Q150 240 145 200 Z" fill="#FF1493"/>
-                    <!-- Legs -->
-                    <line x1="80" y1="270" x2="75" y2="300" stroke="#FFE4C9" stroke-width="10" stroke-linecap="round"/>
-                    <line x1="120" y1="270" x2="125" y2="300" stroke="#FFE4C9" stroke-width="10" stroke-linecap="round"/>
-                    <!-- Hair accessories -->
-                    <circle cx="55" cy="60" r="8" fill="#FFD700"/>
-                    <circle cx="55" cy="60" r="4" fill="#FFF8DC"/>
-                    <circle cx="145" cy="60" r="8" fill="#FFD700"/>
-                    <circle cx="145" cy="60" r="4" fill="#FFF8DC"/>
-                </svg>
-                <div class="speech-bubble left-bubble">
+                <img src="img/miku-character.png" alt="Anime Calculator Mascot" class="character-img" />
+                <div class="speech-bubble left-bubble" style="margin-top:10px;">
                     <span id="leftMessage">Let's calculate!</span>
                 </div>
+            </div>
+
+            <!-- Hidden left SVG (replaced by image above) -->
+            <div style="display:none;">
+                <svg viewBox="0 0 220 350" class="character-svg">
+                    <!-- Long twin-tail left -->
+                    <path d="M45 75 Q30 120 20 200 Q15 260 25 320" stroke="#39C5BB" stroke-width="18" fill="none" stroke-linecap="round"/>
+                    <path d="M45 75 Q28 125 18 200 Q13 260 23 320" stroke="#2DB5A8" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.4"/>
+                    <!-- Long twin-tail right -->
+                    <path d="M175 75 Q190 120 200 200 Q205 260 195 320" stroke="#39C5BB" stroke-width="18" fill="none" stroke-linecap="round"/>
+                    <path d="M175 75 Q192 125 202 200 Q207 260 197 320" stroke="#2DB5A8" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.4"/>
+                    <!-- Hair back -->
+                    <ellipse cx="110" cy="75" rx="62" ry="65" fill="#39C5BB"/>
+                    <!-- Hair side strands -->
+                    <path d="M55 65 Q45 100 50 140" stroke="#39C5BB" stroke-width="14" fill="none" stroke-linecap="round"/>
+                    <path d="M165 65 Q175 100 170 140" stroke="#39C5BB" stroke-width="14" fill="none" stroke-linecap="round"/>
+                    <!-- Face -->
+                    <ellipse cx="110" cy="90" rx="42" ry="48" fill="#FFF0E6"/>
+                    <!-- Hair bangs -->
+                    <path d="M68 65 Q80 40 95 62 Q100 45 110 60 Q115 42 125 62 Q135 38 152 65" fill="#39C5BB"/>
+                    <path d="M68 65 Q75 75 85 68" fill="#39C5BB"/>
+                    <path d="M140 62 Q148 72 155 65" fill="#39C5BB"/>
+                    <!-- Hair highlights -->
+                    <path d="M85 50 Q90 45 95 52" stroke="#7EEEE5" stroke-width="2" fill="none" opacity="0.7"/>
+                    <path d="M120 48 Q125 42 132 50" stroke="#7EEEE5" stroke-width="2" fill="none" opacity="0.7"/>
+                    <!-- Twin-tail ties -->
+                    <circle cx="50" cy="72" r="6" fill="#FF4D6A"/>
+                    <circle cx="50" cy="72" r="3" fill="#FF7A93"/>
+                    <circle cx="170" cy="72" r="6" fill="#FF4D6A"/>
+                    <circle cx="170" cy="72" r="3" fill="#FF7A93"/>
+                    <!-- Eyes -->
+                    <ellipse cx="90" cy="88" rx="11" ry="13" fill="white"/>
+                    <ellipse cx="130" cy="88" rx="11" ry="13" fill="white"/>
+                    <ellipse cx="91" cy="90" rx="8" ry="10" fill="#1E90FF"/>
+                    <ellipse cx="131" cy="90" rx="8" ry="10" fill="#1E90FF"/>
+                    <ellipse cx="88" cy="88" rx="5" ry="6" fill="#0066CC"/>
+                    <ellipse cx="128" cy="88" rx="5" ry="6" fill="#0066CC"/>
+                    <ellipse cx="93" cy="85" rx="3" ry="3" fill="white"/>
+                    <ellipse cx="133" cy="85" rx="3" ry="3" fill="white"/>
+                    <ellipse cx="89" cy="92" rx="1.5" ry="1.5" fill="white" opacity="0.8"/>
+                    <ellipse cx="129" cy="92" rx="1.5" ry="1.5" fill="white" opacity="0.8"/>
+                    <!-- Eyelashes -->
+                    <path d="M79 80 Q82 77 85 79" stroke="#333" stroke-width="1.5" fill="none"/>
+                    <path d="M135 79 Q138 77 141 80" stroke="#333" stroke-width="1.5" fill="none"/>
+                    <!-- Blush -->
+                    <ellipse cx="78" cy="100" rx="8" ry="4" fill="#FFB7C5" opacity="0.45"/>
+                    <ellipse cx="142" cy="100" rx="8" ry="4" fill="#FFB7C5" opacity="0.45"/>
+                    <!-- Mouth (small cute smile) -->
+                    <path d="M103 108 Q110 114 117 108" stroke="#E8927C" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <!-- Headset/headphones -->
+                    <rect x="62" y="75" width="8" height="18" rx="3" fill="#39C5BB" stroke="#2AA8A0" stroke-width="1"/>
+                    <rect x="150" y="75" width="8" height="18" rx="3" fill="#39C5BB" stroke="#2AA8A0" stroke-width="1"/>
+                    <path d="M66 78 Q66 55 110 52 Q154 55 154 78" stroke="#39C5BB" stroke-width="3" fill="none"/>
+                    <!-- Winter outfit / coat -->
+                    <path d="M75 135 Q70 155 65 195 L80 195 Q82 170 88 155 L132 155 Q138 170 140 195 L155 195 Q150 155 145 135 Z" fill="#E8E8E8"/>
+                    <path d="M75 135 L82 135 Q85 140 90 140 L130 140 Q135 140 138 135 L145 135" stroke="#D0D0D0" stroke-width="1" fill="none"/>
+                    <!-- Scarf -->
+                    <path d="M72 130 Q80 125 110 128 Q140 125 148 130 Q150 140 148 148 Q140 145 110 148 Q80 145 72 148 Q70 140 72 130 Z" fill="#FF4D6A"/>
+                    <path d="M105 148 Q108 170 100 190" stroke="#FF4D6A" stroke-width="10" fill="none" stroke-linecap="round"/>
+                    <path d="M115 148 Q118 165 115 180" stroke="#FF4D6A" stroke-width="8" fill="none" stroke-linecap="round"/>
+                    <line x1="72" y1="138" x2="148" y2="138" stroke="#CC3355" stroke-width="1" opacity="0.3"/>
+                    <!-- Arms -->
+                    <path d="M70 155 Q50 175 45 200" stroke="#E8E8E8" stroke-width="12" fill="none" stroke-linecap="round"/>
+                    <path d="M150 155 Q170 175 175 200" stroke="#E8E8E8" stroke-width="12" fill="none" stroke-linecap="round"/>
+                    <!-- Skirt -->
+                    <path d="M65 195 Q58 230 48 260 L172 260 Q162 230 155 195 Z" fill="#39C5BB"/>
+                    <path d="M65 195 Q60 225 52 255" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.5"/>
+                    <path d="M110 195 L110 260" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.3"/>
+                    <path d="M155 195 Q160 225 168 255" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.5"/>
+                    <!-- Legs with thigh-highs -->
+                    <line x1="90" y1="260" x2="85" y2="290" stroke="#333" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="130" y1="260" x2="135" y2="290" stroke="#333" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="85" y1="288" x2="83" y2="300" stroke="#39C5BB" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="135" y1="288" x2="137" y2="300" stroke="#39C5BB" stroke-width="10" stroke-linecap="round"/>
+                    <!-- Snowflake decorations -->
+                    <text x="35" y="160" font-size="12" fill="white" opacity="0.6">&#x2744;</text>
+                    <text x="175" y="180" font-size="10" fill="white" opacity="0.5">&#x2744;</text>
+                    <text x="25" y="250" font-size="8" fill="white" opacity="0.4">&#x2744;</text>
+                    <!-- Cherry ornament on scarf -->
+                    <circle cx="100" cy="192" r="5" fill="#FF4D6A"/>
+                    <circle cx="100" cy="192" r="2.5" fill="#FF7A93"/>
+                </svg>
             </div>
 
             <!-- Calculator -->
@@ -159,57 +200,79 @@
                 </div>
             </div>
 
-            <!-- Anime Character Right -->
+            <!-- Anime Character Right (Miku-style waving) -->
             <div class="anime-character right-character">
-                <svg viewBox="0 0 200 300" class="character-svg">
-                    <!-- Hair -->
-                    <ellipse cx="100" cy="80" rx="65" ry="70" fill="#FF6B9D"/>
-                    <ellipse cx="45" cy="110" rx="18" ry="55" fill="#FF6B9D"/>
-                    <ellipse cx="155" cy="110" rx="18" ry="55" fill="#FF6B9D"/>
-                    <!-- Bangs -->
-                    <path d="M40 70 Q60 30 100 50 Q140 30 160 70" fill="#FF6B9D"/>
-                    <!-- Hair highlights -->
-                    <ellipse cx="75" cy="48" rx="14" ry="7" fill="#FF8FB5" opacity="0.6"/>
-                    <ellipse cx="125" cy="52" rx="11" ry="5" fill="#FF8FB5" opacity="0.6"/>
+                <svg viewBox="0 0 220 350" class="character-svg">
+                    <!-- Long twin-tail left -->
+                    <path d="M45 75 Q25 130 18 210 Q14 270 22 330" stroke="#39C5BB" stroke-width="18" fill="none" stroke-linecap="round"/>
+                    <path d="M45 75 Q23 135 16 210 Q12 270 20 330" stroke="#2DB5A8" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.4"/>
+                    <!-- Long twin-tail right -->
+                    <path d="M175 75 Q195 130 202 210 Q206 270 198 330" stroke="#39C5BB" stroke-width="18" fill="none" stroke-linecap="round"/>
+                    <path d="M175 75 Q197 135 204 210 Q208 270 200 330" stroke="#2DB5A8" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.4"/>
+                    <!-- Hair back -->
+                    <ellipse cx="110" cy="75" rx="62" ry="65" fill="#39C5BB"/>
+                    <!-- Hair side strands -->
+                    <path d="M55 65 Q45 100 50 140" stroke="#39C5BB" stroke-width="14" fill="none" stroke-linecap="round"/>
+                    <path d="M165 65 Q175 100 170 140" stroke="#39C5BB" stroke-width="14" fill="none" stroke-linecap="round"/>
                     <!-- Face -->
-                    <ellipse cx="100" cy="90" rx="45" ry="50" fill="#FFE4C9"/>
-                    <!-- Eyes -->
-                    <ellipse cx="80" cy="85" rx="12" ry="14" fill="white"/>
-                    <ellipse cx="120" cy="85" rx="12" ry="14" fill="white"/>
-                    <ellipse cx="78" cy="87" rx="8" ry="10" fill="#FF69B4"/>
-                    <ellipse cx="118" cy="87" rx="8" ry="10" fill="#FF69B4"/>
-                    <ellipse cx="80" cy="84" rx="3" ry="3" fill="white"/>
-                    <ellipse cx="120" cy="84" rx="3" ry="3" fill="white"/>
-                    <ellipse cx="76" cy="90" rx="2" ry="2" fill="white" opacity="0.7"/>
-                    <ellipse cx="116" cy="90" rx="2" ry="2" fill="white" opacity="0.7"/>
-                    <!-- Cat ears -->
-                    <path d="M50 40 L65 0 L80 45 Z" fill="#FF6B9D"/>
-                    <path d="M50 40 L65 8 L78 43 Z" fill="#FFB7C5" transform="scale(0.7) translate(30, 15)"/>
-                    <path d="M120 45 L135 0 L150 40 Z" fill="#FF6B9D"/>
-                    <path d="M120 45 L135 8 L148 38 Z" fill="#FFB7C5" transform="scale(0.7) translate(55, 18)"/>
+                    <ellipse cx="110" cy="90" rx="42" ry="48" fill="#FFF0E6"/>
+                    <!-- Hair bangs -->
+                    <path d="M68 65 Q80 40 95 62 Q100 45 110 60 Q115 42 125 62 Q135 38 152 65" fill="#39C5BB"/>
+                    <path d="M68 65 Q75 75 85 68" fill="#39C5BB"/>
+                    <path d="M140 62 Q148 72 155 65" fill="#39C5BB"/>
+                    <!-- Hair highlights -->
+                    <path d="M88 52 Q93 46 98 54" stroke="#7EEEE5" stroke-width="2" fill="none" opacity="0.7"/>
+                    <path d="M118 46 Q123 40 130 48" stroke="#7EEEE5" stroke-width="2" fill="none" opacity="0.7"/>
+                    <!-- Twin-tail ties -->
+                    <circle cx="50" cy="72" r="6" fill="#FF4D6A"/>
+                    <circle cx="50" cy="72" r="3" fill="#FF7A93"/>
+                    <circle cx="170" cy="72" r="6" fill="#FF4D6A"/>
+                    <circle cx="170" cy="72" r="3" fill="#FF7A93"/>
+                    <!-- Eyes (winking right eye) -->
+                    <ellipse cx="90" cy="88" rx="11" ry="13" fill="white"/>
+                    <ellipse cx="91" cy="90" rx="8" ry="10" fill="#1E90FF"/>
+                    <ellipse cx="88" cy="88" rx="5" ry="6" fill="#0066CC"/>
+                    <ellipse cx="93" cy="85" rx="3" ry="3" fill="white"/>
+                    <ellipse cx="89" cy="92" rx="1.5" ry="1.5" fill="white" opacity="0.8"/>
+                    <!-- Right eye wink -->
+                    <path d="M121 90 Q130 86 139 90" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <!-- Eyelashes -->
+                    <path d="M79 80 Q82 77 85 79" stroke="#333" stroke-width="1.5" fill="none"/>
+                    <path d="M135 86 Q138 84 141 87" stroke="#333" stroke-width="1.5" fill="none"/>
                     <!-- Blush -->
-                    <ellipse cx="68" cy="100" rx="10" ry="5" fill="#FFB7C5" opacity="0.5"/>
-                    <ellipse cx="132" cy="100" rx="10" ry="5" fill="#FFB7C5" opacity="0.5"/>
-                    <!-- Mouth (cat smile) -->
-                    <path d="M90 108 Q95 104 100 108 Q105 104 110 108" stroke="#E8927C" stroke-width="2" fill="none" stroke-linecap="round"/>
-                    <!-- Body (school uniform) -->
-                    <path d="M65 135 Q60 160 55 200 L70 200 Q75 170 80 155 L120 155 Q125 170 130 200 L145 200 Q140 160 135 135 Z" fill="#4169E1"/>
-                    <!-- Collar / Ribbon -->
-                    <path d="M85 140 L100 165 L115 140" stroke="#FF1493" stroke-width="4" fill="none"/>
-                    <circle cx="100" cy="148" r="4" fill="#FFD700"/>
-                    <!-- Arms -->
-                    <path d="M65 150 Q45 175 50 205" stroke="#FFE4C9" stroke-width="12" fill="none" stroke-linecap="round"/>
-                    <path d="M135 150 Q155 170 155 195" stroke="#FFE4C9" stroke-width="12" fill="none" stroke-linecap="round"/>
-                    <!-- Hand wave -->
-                    <circle cx="155" cy="195" r="8" fill="#FFE4C9"/>
+                    <ellipse cx="78" cy="100" rx="8" ry="4" fill="#FFB7C5" opacity="0.5"/>
+                    <ellipse cx="142" cy="100" rx="8" ry="4" fill="#FFB7C5" opacity="0.5"/>
+                    <!-- Mouth (open smile) -->
+                    <path d="M100 106 Q110 118 120 106" stroke="#E8927C" stroke-width="2" fill="#FFE4E4" stroke-linecap="round"/>
+                    <!-- Headset/headphones -->
+                    <rect x="62" y="75" width="8" height="18" rx="3" fill="#39C5BB" stroke="#2AA8A0" stroke-width="1"/>
+                    <rect x="150" y="75" width="8" height="18" rx="3" fill="#39C5BB" stroke="#2AA8A0" stroke-width="1"/>
+                    <path d="M66 78 Q66 55 110 52 Q154 55 154 78" stroke="#39C5BB" stroke-width="3" fill="none"/>
+                    <!-- Winter outfit / coat -->
+                    <path d="M75 135 Q70 155 65 195 L80 195 Q82 170 88 155 L132 155 Q138 170 140 195 L155 195 Q150 155 145 135 Z" fill="#E8E8E8"/>
+                    <!-- Scarf -->
+                    <path d="M72 130 Q80 125 110 128 Q140 125 148 130 Q150 140 148 148 Q140 145 110 148 Q80 145 72 148 Q70 140 72 130 Z" fill="#FF4D6A"/>
+                    <path d="M108 148 Q112 175 105 195" stroke="#FF4D6A" stroke-width="10" fill="none" stroke-linecap="round"/>
+                    <line x1="72" y1="138" x2="148" y2="138" stroke="#CC3355" stroke-width="1" opacity="0.3"/>
+                    <!-- Arms (right arm waving) -->
+                    <path d="M70 155 Q50 175 45 200" stroke="#E8E8E8" stroke-width="12" fill="none" stroke-linecap="round"/>
+                    <path d="M150 150 Q170 140 180 120" stroke="#E8E8E8" stroke-width="12" fill="none" stroke-linecap="round"/>
+                    <!-- Waving hand -->
+                    <circle cx="182" cy="116" r="7" fill="#FFF0E6"/>
                     <!-- Skirt -->
-                    <path d="M55 200 Q48 240 38 270 L162 270 Q152 240 145 200 Z" fill="#1E3A8A"/>
-                    <!-- Legs -->
-                    <line x1="80" y1="270" x2="75" y2="295" stroke="#FFE4C9" stroke-width="10" stroke-linecap="round"/>
-                    <line x1="120" y1="270" x2="125" y2="295" stroke="#FFE4C9" stroke-width="10" stroke-linecap="round"/>
-                    <!-- Socks -->
-                    <line x1="75" y1="285" x2="73" y2="300" stroke="white" stroke-width="12" stroke-linecap="round"/>
-                    <line x1="125" y1="285" x2="127" y2="300" stroke="white" stroke-width="12" stroke-linecap="round"/>
+                    <path d="M65 195 Q58 230 48 260 L172 260 Q162 230 155 195 Z" fill="#39C5BB"/>
+                    <path d="M65 195 Q60 225 52 255" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.5"/>
+                    <path d="M110 195 L110 260" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.3"/>
+                    <path d="M155 195 Q160 225 168 255" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.5"/>
+                    <!-- Legs with thigh-highs -->
+                    <line x1="90" y1="260" x2="85" y2="290" stroke="#333" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="130" y1="260" x2="135" y2="290" stroke="#333" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="85" y1="288" x2="83" y2="300" stroke="#39C5BB" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="135" y1="288" x2="137" y2="300" stroke="#39C5BB" stroke-width="10" stroke-linecap="round"/>
+                    <!-- Snowflake decorations -->
+                    <text x="180" y="150" font-size="10" fill="white" opacity="0.5">&#x2744;</text>
+                    <text x="30" y="200" font-size="12" fill="white" opacity="0.4">&#x2744;</text>
+                    <text x="185" y="240" font-size="8" fill="white" opacity="0.3">&#x2744;</text>
                 </svg>
                 <div class="speech-bubble right-bubble">
                     <span id="rightMessage">Math is fun!</span>

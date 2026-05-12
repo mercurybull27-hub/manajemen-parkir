@@ -16,7 +16,7 @@
         const startX = Math.random() * window.innerWidth;
         const duration = 8 + Math.random() * 12;
         const delay = Math.random() * 10;
-        const hue = 330 + Math.random() * 30;
+        const hue = 170 + Math.random() * 20;
         const drift = (Math.random() - 0.5) * 200;
 
         petal.style.width = size + 'px';
@@ -87,9 +87,9 @@
             star.style.animationDelay = Math.random() * 4 + 's';
 
             if (Math.random() > 0.7) {
-                star.style.background = '#FFB7C5';
+                star.style.background = '#7EEEE5';
             } else if (Math.random() > 0.5) {
-                star.style.background = '#B8A9FF';
+                star.style.background = '#90C8FF';
             }
 
             starsContainer.appendChild(star);
@@ -122,7 +122,7 @@
         sparkle.style.pointerEvents = 'none';
         sparkle.style.zIndex = '9999';
 
-        const colors = ['#FFB7C5', '#7B68EE', '#FFD700', '#FF69B4', '#B8A9FF'];
+        const colors = ['#7EEEE5', '#39C5BB', '#FFD700', '#1E90FF', '#90C8FF'];
         sparkle.style.background = colors[Math.floor(Math.random() * colors.length)];
 
         const angle = Math.random() * Math.PI * 2;
