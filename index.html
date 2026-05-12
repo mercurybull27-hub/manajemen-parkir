@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Scientific Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cherry Blossom Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Floating Stars -->
+    <div class="floating-stars" id="floatingStars"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">&#x2728;</span>
+                    <h1>Anime Calc</h1>
+                    <span class="logo-icon">&#x2728;</span>
+                </div>
+                <p class="subtitle">Scientific Calculator</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Anime Character Left (Miku image) -->
+            <div class="anime-character left-character">
+                <img src="img/miku-character.png" alt="Anime Calculator Mascot" class="character-img" />
+                <div class="speech-bubble left-bubble" style="margin-top:10px;">
+                    <span id="leftMessage">Let's calculate!</span>
+                </div>
+            </div>
+
+            <!-- Hidden left SVG (replaced by image above) -->
+            <div style="display:none;">
+                <svg viewBox="0 0 220 350" class="character-svg">
+                    <!-- Long twin-tail left -->
+                    <path d="M45 75 Q30 120 20 200 Q15 260 25 320" stroke="#39C5BB" stroke-width="18" fill="none" stroke-linecap="round"/>
+                    <path d="M45 75 Q28 125 18 200 Q13 260 23 320" stroke="#2DB5A8" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.4"/>
+                    <!-- Long twin-tail right -->
+                    <path d="M175 75 Q190 120 200 200 Q205 260 195 320" stroke="#39C5BB" stroke-width="18" fill="none" stroke-linecap="round"/>
+                    <path d="M175 75 Q192 125 202 200 Q207 260 197 320" stroke="#2DB5A8" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.4"/>
+                    <!-- Hair back -->
+                    <ellipse cx="110" cy="75" rx="62" ry="65" fill="#39C5BB"/>
+                    <!-- Hair side strands -->
+                    <path d="M55 65 Q45 100 50 140" stroke="#39C5BB" stroke-width="14" fill="none" stroke-linecap="round"/>
+                    <path d="M165 65 Q175 100 170 140" stroke="#39C5BB" stroke-width="14" fill="none" stroke-linecap="round"/>
+                    <!-- Face -->
+                    <ellipse cx="110" cy="90" rx="42" ry="48" fill="#FFF0E6"/>
+                    <!-- Hair bangs -->
+                    <path d="M68 65 Q80 40 95 62 Q100 45 110 60 Q115 42 125 62 Q135 38 152 65" fill="#39C5BB"/>
+                    <path d="M68 65 Q75 75 85 68" fill="#39C5BB"/>
+                    <path d="M140 62 Q148 72 155 65" fill="#39C5BB"/>
+                    <!-- Hair highlights -->
+                    <path d="M85 50 Q90 45 95 52" stroke="#7EEEE5" stroke-width="2" fill="none" opacity="0.7"/>
+                    <path d="M120 48 Q125 42 132 50" stroke="#7EEEE5" stroke-width="2" fill="none" opacity="0.7"/>
+                    <!-- Twin-tail ties -->
+                    <circle cx="50" cy="72" r="6" fill="#FF4D6A"/>
+                    <circle cx="50" cy="72" r="3" fill="#FF7A93"/>
+                    <circle cx="170" cy="72" r="6" fill="#FF4D6A"/>
+                    <circle cx="170" cy="72" r="3" fill="#FF7A93"/>
+                    <!-- Eyes -->
+                    <ellipse cx="90" cy="88" rx="11" ry="13" fill="white"/>
+                    <ellipse cx="130" cy="88" rx="11" ry="13" fill="white"/>
+                    <ellipse cx="91" cy="90" rx="8" ry="10" fill="#1E90FF"/>
+                    <ellipse cx="131" cy="90" rx="8" ry="10" fill="#1E90FF"/>
+                    <ellipse cx="88" cy="88" rx="5" ry="6" fill="#0066CC"/>
+                    <ellipse cx="128" cy="88" rx="5" ry="6" fill="#0066CC"/>
+                    <ellipse cx="93" cy="85" rx="3" ry="3" fill="white"/>
+                    <ellipse cx="133" cy="85" rx="3" ry="3" fill="white"/>
+                    <ellipse cx="89" cy="92" rx="1.5" ry="1.5" fill="white" opacity="0.8"/>
+                    <ellipse cx="129" cy="92" rx="1.5" ry="1.5" fill="white" opacity="0.8"/>
+                    <!-- Eyelashes -->
+                    <path d="M79 80 Q82 77 85 79" stroke="#333" stroke-width="1.5" fill="none"/>
+                    <path d="M135 79 Q138 77 141 80" stroke="#333" stroke-width="1.5" fill="none"/>
+                    <!-- Blush -->
+                    <ellipse cx="78" cy="100" rx="8" ry="4" fill="#FFB7C5" opacity="0.45"/>
+                    <ellipse cx="142" cy="100" rx="8" ry="4" fill="#FFB7C5" opacity="0.45"/>
+                    <!-- Mouth (small cute smile) -->
+                    <path d="M103 108 Q110 114 117 108" stroke="#E8927C" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <!-- Headset/headphones -->
+                    <rect x="62" y="75" width="8" height="18" rx="3" fill="#39C5BB" stroke="#2AA8A0" stroke-width="1"/>
+                    <rect x="150" y="75" width="8" height="18" rx="3" fill="#39C5BB" stroke="#2AA8A0" stroke-width="1"/>
+                    <path d="M66 78 Q66 55 110 52 Q154 55 154 78" stroke="#39C5BB" stroke-width="3" fill="none"/>
+                    <!-- Winter outfit / coat -->
+                    <path d="M75 135 Q70 155 65 195 L80 195 Q82 170 88 155 L132 155 Q138 170 140 195 L155 195 Q150 155 145 135 Z" fill="#E8E8E8"/>
+                    <path d="M75 135 L82 135 Q85 140 90 140 L130 140 Q135 140 138 135 L145 135" stroke="#D0D0D0" stroke-width="1" fill="none"/>
+                    <!-- Scarf -->
+                    <path d="M72 130 Q80 125 110 128 Q140 125 148 130 Q150 140 148 148 Q140 145 110 148 Q80 145 72 148 Q70 140 72 130 Z" fill="#FF4D6A"/>
+                    <path d="M105 148 Q108 170 100 190" stroke="#FF4D6A" stroke-width="10" fill="none" stroke-linecap="round"/>
+                    <path d="M115 148 Q118 165 115 180" stroke="#FF4D6A" stroke-width="8" fill="none" stroke-linecap="round"/>
+                    <line x1="72" y1="138" x2="148" y2="138" stroke="#CC3355" stroke-width="1" opacity="0.3"/>
+                    <!-- Arms -->
+                    <path d="M70 155 Q50 175 45 200" stroke="#E8E8E8" stroke-width="12" fill="none" stroke-linecap="round"/>
+                    <path d="M150 155 Q170 175 175 200" stroke="#E8E8E8" stroke-width="12" fill="none" stroke-linecap="round"/>
+                    <!-- Skirt -->
+                    <path d="M65 195 Q58 230 48 260 L172 260 Q162 230 155 195 Z" fill="#39C5BB"/>
+                    <path d="M65 195 Q60 225 52 255" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.5"/>
+                    <path d="M110 195 L110 260" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.3"/>
+                    <path d="M155 195 Q160 225 168 255" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.5"/>
+                    <!-- Legs with thigh-highs -->
+                    <line x1="90" y1="260" x2="85" y2="290" stroke="#333" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="130" y1="260" x2="135" y2="290" stroke="#333" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="85" y1="288" x2="83" y2="300" stroke="#39C5BB" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="135" y1="288" x2="137" y2="300" stroke="#39C5BB" stroke-width="10" stroke-linecap="round"/>
+                    <!-- Snowflake decorations -->
+                    <text x="35" y="160" font-size="12" fill="white" opacity="0.6">&#x2744;</text>
+                    <text x="175" y="180" font-size="10" fill="white" opacity="0.5">&#x2744;</text>
+                    <text x="25" y="250" font-size="8" fill="white" opacity="0.4">&#x2744;</text>
+                    <!-- Cherry ornament on scarf -->
+                    <circle cx="100" cy="192" r="5" fill="#FF4D6A"/>
+                    <circle cx="100" cy="192" r="2.5" fill="#FF7A93"/>
+                </svg>
+            </div>
+
+            <!-- Calculator -->
+            <div class="calculator-wrapper">
+                <div class="calculator">
+                    <!-- Display -->
+                    <div class="display-container">
+                        <div class="display-decoration top-left"></div>
+                        <div class="display-decoration top-right"></div>
+                        <div class="expression-display" id="expression">0</div>
+                        <div class="result-display" id="result"></div>
+                        <div class="mode-indicator">
+                            <span id="modeLabel" class="mode-badge">DEG</span>
+                            <span id="memoryLabel" class="memory-badge" style="display:none;">M</span>
+                        </div>
+                    </div>
+
+                    <!-- Button Grid -->
+                    <div class="button-grid">
+                        <!-- Row 1: Scientific -->
+                        <button class="btn btn-sci" data-action="toggleMode" id="modeBtn">DEG</button>
+                        <button class="btn btn-sci" data-action="func" data-func="sin">sin</button>
+                        <button class="btn btn-sci" data-action="func" data-func="cos">cos</button>
+                        <button class="btn btn-sci" data-action="func" data-func="tan">tan</button>
+                        <button class="btn btn-sci" data-action="const" data-value="pi">&pi;</button>
+
+                        <!-- Row 2: Scientific -->
+                        <button class="btn btn-sci" data-action="second" id="secondBtn">2nd</button>
+                        <button class="btn btn-sci" data-action="func" data-func="asin" style="display:none;" data-second>sin<sup>-1</sup></button>
+                        <button class="btn btn-sci" data-action="func" data-func="acos" style="display:none;" data-second>cos<sup>-1</sup></button>
+                        <button class="btn btn-sci" data-action="func" data-func="atan" style="display:none;" data-second>tan<sup>-1</sup></button>
+                        <button class="btn btn-sci" data-action="func" data-func="log">log</button>
+                        <button class="btn btn-sci" data-action="func" data-func="ln">ln</button>
+                        <button class="btn btn-sci" data-action="func" data-func="sqrt">&radic;</button>
+                        <button class="btn btn-sci" data-action="const" data-value="e">e</button>
+
+                        <!-- Row 3: Scientific -->
+                        <button class="btn btn-sci" data-action="power" data-power="2">x&sup2;</button>
+                        <button class="btn btn-sci" data-action="power" data-power="3">x&sup3;</button>
+                        <button class="btn btn-sci" data-action="powerN">x<sup>n</sup></button>
+                        <button class="btn btn-sci" data-action="func" data-func="factorial">n!</button>
+                        <button class="btn btn-sci" data-action="func" data-func="abs">|x|</button>
+
+                        <!-- Row 4: Parentheses & Clear -->
+                        <button class="btn btn-op" data-action="paren" data-value="(">(</button>
+                        <button class="btn btn-op" data-action="paren" data-value=")">)</button>
+                        <button class="btn btn-op" data-action="percent">%</button>
+                        <button class="btn btn-clear" data-action="clear">AC</button>
+                        <button class="btn btn-clear" data-action="backspace">&#x232B;</button>
+
+                        <!-- Row 5: Numbers & Operators -->
+                        <button class="btn btn-num" data-action="number" data-value="7">7</button>
+                        <button class="btn btn-num" data-action="number" data-value="8">8</button>
+                        <button class="btn btn-num" data-action="number" data-value="9">9</button>
+                        <button class="btn btn-op" data-action="operator" data-value="/">&divide;</button>
+                        <button class="btn btn-memory" data-action="memory" data-mem="mc">MC</button>
+
+                        <!-- Row 6 -->
+                        <button class="btn btn-num" data-action="number" data-value="4">4</button>
+                        <button class="btn btn-num" data-action="number" data-value="5">5</button>
+                        <button class="btn btn-num" data-action="number" data-value="6">6</button>
+                        <button class="btn btn-op" data-action="operator" data-value="*">&times;</button>
+                        <button class="btn btn-memory" data-action="memory" data-mem="mr">MR</button>
+
+                        <!-- Row 7 -->
+                        <button class="btn btn-num" data-action="number" data-value="1">1</button>
+                        <button class="btn btn-num" data-action="number" data-value="2">2</button>
+                        <button class="btn btn-num" data-action="number" data-value="3">3</button>
+                        <button class="btn btn-op" data-action="operator" data-value="-">&minus;</button>
+                        <button class="btn btn-memory" data-action="memory" data-mem="m+">M+</button>
+
+                        <!-- Row 8 -->
+                        <button class="btn btn-num" data-action="number" data-value="0">0</button>
+                        <button class="btn btn-num" data-action="decimal">.</button>
+                        <button class="btn btn-num" data-action="negate">&plusmn;</button>
+                        <button class="btn btn-op" data-action="operator" data-value="+">+</button>
+                        <button class="btn btn-equals" data-action="equals">=</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anime Character Right (Miku-style waving) -->
+            <div class="anime-character right-character">
+                <svg viewBox="0 0 220 350" class="character-svg">
+                    <!-- Long twin-tail left -->
+                    <path d="M45 75 Q25 130 18 210 Q14 270 22 330" stroke="#39C5BB" stroke-width="18" fill="none" stroke-linecap="round"/>
+                    <path d="M45 75 Q23 135 16 210 Q12 270 20 330" stroke="#2DB5A8" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.4"/>
+                    <!-- Long twin-tail right -->
+                    <path d="M175 75 Q195 130 202 210 Q206 270 198 330" stroke="#39C5BB" stroke-width="18" fill="none" stroke-linecap="round"/>
+                    <path d="M175 75 Q197 135 204 210 Q208 270 200 330" stroke="#2DB5A8" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.4"/>
+                    <!-- Hair back -->
+                    <ellipse cx="110" cy="75" rx="62" ry="65" fill="#39C5BB"/>
+                    <!-- Hair side strands -->
+                    <path d="M55 65 Q45 100 50 140" stroke="#39C5BB" stroke-width="14" fill="none" stroke-linecap="round"/>
+                    <path d="M165 65 Q175 100 170 140" stroke="#39C5BB" stroke-width="14" fill="none" stroke-linecap="round"/>
+                    <!-- Face -->
+                    <ellipse cx="110" cy="90" rx="42" ry="48" fill="#FFF0E6"/>
+                    <!-- Hair bangs -->
+                    <path d="M68 65 Q80 40 95 62 Q100 45 110 60 Q115 42 125 62 Q135 38 152 65" fill="#39C5BB"/>
+                    <path d="M68 65 Q75 75 85 68" fill="#39C5BB"/>
+                    <path d="M140 62 Q148 72 155 65" fill="#39C5BB"/>
+                    <!-- Hair highlights -->
+                    <path d="M88 52 Q93 46 98 54" stroke="#7EEEE5" stroke-width="2" fill="none" opacity="0.7"/>
+                    <path d="M118 46 Q123 40 130 48" stroke="#7EEEE5" stroke-width="2" fill="none" opacity="0.7"/>
+                    <!-- Twin-tail ties -->
+                    <circle cx="50" cy="72" r="6" fill="#FF4D6A"/>
+                    <circle cx="50" cy="72" r="3" fill="#FF7A93"/>
+                    <circle cx="170" cy="72" r="6" fill="#FF4D6A"/>
+                    <circle cx="170" cy="72" r="3" fill="#FF7A93"/>
+                    <!-- Eyes (winking right eye) -->
+                    <ellipse cx="90" cy="88" rx="11" ry="13" fill="white"/>
+                    <ellipse cx="91" cy="90" rx="8" ry="10" fill="#1E90FF"/>
+                    <ellipse cx="88" cy="88" rx="5" ry="6" fill="#0066CC"/>
+                    <ellipse cx="93" cy="85" rx="3" ry="3" fill="white"/>
+                    <ellipse cx="89" cy="92" rx="1.5" ry="1.5" fill="white" opacity="0.8"/>
+                    <!-- Right eye wink -->
+                    <path d="M121 90 Q130 86 139 90" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <!-- Eyelashes -->
+                    <path d="M79 80 Q82 77 85 79" stroke="#333" stroke-width="1.5" fill="none"/>
+                    <path d="M135 86 Q138 84 141 87" stroke="#333" stroke-width="1.5" fill="none"/>
+                    <!-- Blush -->
+                    <ellipse cx="78" cy="100" rx="8" ry="4" fill="#FFB7C5" opacity="0.5"/>
+                    <ellipse cx="142" cy="100" rx="8" ry="4" fill="#FFB7C5" opacity="0.5"/>
+                    <!-- Mouth (open smile) -->
+                    <path d="M100 106 Q110 118 120 106" stroke="#E8927C" stroke-width="2" fill="#FFE4E4" stroke-linecap="round"/>
+                    <!-- Headset/headphones -->
+                    <rect x="62" y="75" width="8" height="18" rx="3" fill="#39C5BB" stroke="#2AA8A0" stroke-width="1"/>
+                    <rect x="150" y="75" width="8" height="18" rx="3" fill="#39C5BB" stroke="#2AA8A0" stroke-width="1"/>
+                    <path d="M66 78 Q66 55 110 52 Q154 55 154 78" stroke="#39C5BB" stroke-width="3" fill="none"/>
+                    <!-- Winter outfit / coat -->
+                    <path d="M75 135 Q70 155 65 195 L80 195 Q82 170 88 155 L132 155 Q138 170 140 195 L155 195 Q150 155 145 135 Z" fill="#E8E8E8"/>
+                    <!-- Scarf -->
+                    <path d="M72 130 Q80 125 110 128 Q140 125 148 130 Q150 140 148 148 Q140 145 110 148 Q80 145 72 148 Q70 140 72 130 Z" fill="#FF4D6A"/>
+                    <path d="M108 148 Q112 175 105 195" stroke="#FF4D6A" stroke-width="10" fill="none" stroke-linecap="round"/>
+                    <line x1="72" y1="138" x2="148" y2="138" stroke="#CC3355" stroke-width="1" opacity="0.3"/>
+                    <!-- Arms (right arm waving) -->
+                    <path d="M70 155 Q50 175 45 200" stroke="#E8E8E8" stroke-width="12" fill="none" stroke-linecap="round"/>
+                    <path d="M150 150 Q170 140 180 120" stroke="#E8E8E8" stroke-width="12" fill="none" stroke-linecap="round"/>
+                    <!-- Waving hand -->
+                    <circle cx="182" cy="116" r="7" fill="#FFF0E6"/>
+                    <!-- Skirt -->
+                    <path d="M65 195 Q58 230 48 260 L172 260 Q162 230 155 195 Z" fill="#39C5BB"/>
+                    <path d="M65 195 Q60 225 52 255" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.5"/>
+                    <path d="M110 195 L110 260" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.3"/>
+                    <path d="M155 195 Q160 225 168 255" stroke="#2DB5A8" stroke-width="1" fill="none" opacity="0.5"/>
+                    <!-- Legs with thigh-highs -->
+                    <line x1="90" y1="260" x2="85" y2="290" stroke="#333" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="130" y1="260" x2="135" y2="290" stroke="#333" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="85" y1="288" x2="83" y2="300" stroke="#39C5BB" stroke-width="10" stroke-linecap="round"/>
+                    <line x1="135" y1="288" x2="137" y2="300" stroke="#39C5BB" stroke-width="10" stroke-linecap="round"/>
+                    <!-- Snowflake decorations -->
+                    <text x="180" y="150" font-size="10" fill="white" opacity="0.5">&#x2744;</text>
+                    <text x="30" y="200" font-size="12" fill="white" opacity="0.4">&#x2744;</text>
+                    <text x="185" y="240" font-size="8" fill="white" opacity="0.3">&#x2744;</text>
+                </svg>
+                <div class="speech-bubble right-bubble">
+                    <span id="rightMessage">Math is fun!</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with <span class="heart">&hearts;</span> | Anime Scientific Calculator</p>
+        </footer>
+    </div>
+
+    <script src="js/calculator.js"></script>
+    <script src="js/particles.js"></script>
+</body>
+</html>
